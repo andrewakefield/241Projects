@@ -1,39 +1,45 @@
 """
 ECE241 Fall 2025 - Homework1 Question2
+Andrew Wakefield
 """
+import math
 
 
 class Question2:
     @staticmethod
     def solveMonomial(a, b, c):
+        """Solves the monomial for x in the form ax - 2b = c
+
+        Args:
+            a: user input
+            b: user input
+            c: user input
+
+        Returns:
+            int: x
         """
 
-        :param a:
-        :param b:
-        :param c:
-        :return:
-        """
-        # fill in your logic here
-
-        return -1
-
+        return (2*b + c) / a # solution to x
+    
     @staticmethod
     def solvePolynomial(a, b, c):
+        """Solves the monomial for x in the form sqrt(ax - 2b) = c
+
+        Args:
+            a: user input
+            b: user input
+            c: user input
+
+        Returns:
+            int: x
         """
 
-        :param a:
-        :param b:
-        :param c:
-        :return:
-        """
-        # fill in your logic here
-
-        return -1
+        return (c**2 - 2*b) / a # solution to x
 
     @staticmethod
     def autograder():
-        monomial_result = "REPLACE_WITH_YOUR_RESULT_HERE"
-        polynomial_result = "REPLACE_WITH_YOUR_RESULT_HERE"
+        monomial_result = "36.14705882352941"
+        polynomial_result = "869.7352941176471"
 
         # Do NOT change the code below!
         return {

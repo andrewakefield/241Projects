@@ -1,24 +1,25 @@
-"""tictactoe game for 2 players"""
+"""tictactoe game for 2 players
+Andrew Wakefield"""
 
-for x in range (1, 9) :
+choices = [] # FIX: initialize choices as an empty array
+for x in range (1, 10) : # FIX: change range max to 10 so 9 is included
     choices.append(x)
 
-playerOneTurn == True
+playerOneTurn = True # FIX: replace equality operator with the assignment operator
 winner = False
 
-
+# FIX: convert choices [i] to str before attempting concatenation
 def printBoard() :
     print( '\n -----')
-    print( '|' + choices[0] + '|' + choices[1] + '|' + choices[2] + '|')
+    print( '|' + str((choices[0])) + '|' + str(choices[1]) + '|' + str(choices[2]) + '|')
     print( ' -----')
-    print( '|' + choices[3] + '|' + choices[4] + '|' + choices[5] + '|')
+    print( '|' + str(choices[3]) + '|' + str(choices[4]) + '|' + str(choices[5]) + '|')
     print( ' -----')
-    print( '|' + choices[6] + '|' + choices[7] + '|' + choices[8] + '|')
+    print( '|' + str(choices[6]) + '|' + str(choices[7]) + '|' + str(choices[8]) + '|')
     print( ' -----\n')
 
-
-while winner :
-    PrintBoard()
+while not winner : # FIX: winner should be notted as it is currently False
+    printBoard() # FIX: lowercase PrintBoard() to printBoard() to match function name
 
     if playerOneTurn :
         print( "Player 1:")
@@ -31,19 +32,19 @@ while winner :
         print("please enter a valid field")
         continue
 
-    if choices[choice - 1] = 'X' or choices [choice] == 'O':
+    if choices[choice - 1] == 'X' or choices [choice - 1] == 'O': # FIX: replace assignment operator with equality operator and indice of choices to choice - 1
         print("illegal move, please try again")
         continue
 
     if playerOneTurn :
-        choices[choice - 1] = X
+        choices[choice - 1] = "X" # FIX: add "" marks around letter so it is recognizes as a string
     else :
-        choices[choice - 1] = O
+        choices[choice - 1] = "O" # FIX: add "" marks around letter so it is recognizes as a string
 
     playerOneTurn = not playerOneTurn
 
     for x in range (0, 3) :  # Place break point at this line!
-            y = x * 3
+        y = x * 3 # FIX: remove extra indentation
         if (choices[y] == choices[(y + 1)] and choices[y] == choices[(y + 2)]) :
             winner = True
             printBoard()
@@ -53,7 +54,7 @@ while winner :
 
     if((choices[0] == choices[4] and choices[0] == choices[8]) or
        (choices[2] == choices[4] and choices[4] == choices[6])) :
-        winner = true
+        winner = True # FIX: capitalize 'true' to 'True'
         printBoard()
 
 print ("Player " + str(int(playerOneTurn + 1)) + " wins!\n")
