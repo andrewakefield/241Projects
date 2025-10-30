@@ -1,3 +1,14 @@
-lst = [1, 2, 3, 'Andy', 'other']
-indices = [i for i in range(len(lst)) if lst[i] == 'Andy'] # essentially the first i means append i to this indice; if it didnt exist a syntax error would occur
-print(indices)
+def d_add(a, b):
+    return 2*(a+b)
+
+def mult(a, b):
+    return a*b
+
+def mult(c, d):
+    return c/d
+
+def main():
+    print("")
+
+if __name__ == "__main__":
+    main()
